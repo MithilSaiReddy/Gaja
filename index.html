@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaja - GUI for aerender</title>
+  <link rel="icon" href="assets/logo.ico" type="image/x-icon">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: #0C2D6B;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin: 0.5rem 0;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-download {
+      background: white;
+      color: #0C2D6B;
+      padding: 0.9rem 2rem;
+      border-radius: 0.75rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background 0.3s, color 0.3s, transform 0.2s;
+      margin-bottom: 2rem;
+    }
+
+    .btn-download:hover {
+      background: #1E3D8C;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* How to Use Section inside Hero */
+    .how-to {
+      max-width: 600px;
+      text-align: left;
+      background: rgba(255,255,255,0.1);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .how-to h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .how-to ol {
+      padding-left: 1.2rem;
+      margin: 0;
+    }
+
+    .how-to li {
+      margin: 0.5rem 0;
+    }
+
+    /* Screenshot Section */
+    .screenshots {
+      background: #f8f9fa;
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+
+    .screenshots h2 {
+      font-size: 2rem;
+      color: #0C2D6B;
+      margin-bottom: 2rem;
+    }
+
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .screenshot-grid img {
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+
+    .screenshot-grid img:hover {
+      transform: scale(1.02);
+    }
+
+    /* Responsive grid + hero text scaling */
+    @media (min-width: 768px) {
+      .hero h1 { font-size: 3rem; }
+      .hero p { font-size: 1.3rem; }
+      .btn-download { font-size: 1.1rem; padding: 1rem 2.5rem; }
+      .screenshot-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1200px) {
+      .hero h1 { font-size: 4rem; }
+      .hero p { font-size: 1.5rem; }
+      .btn-download { font-size: 1.2rem; padding: 1.2rem 3rem; }
+      .screenshot-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Fullscreen Hero -->
+  <section class="hero">
+    <h1>Gaja - GUI for aerender</h1>
+    <p>Fast. Friendly.</p>
+    <a href="downloads/Gaja-FreeEdition.zip" class="btn-download">
+      Download for macOS (Intel)
+    </a>
+
+    <!-- How to Use -->
+    <div class="how-to">
+      <h2>How to Use</h2>
+      <ol>
+        <li>Input project</li>
+        <li>Name the composition you want to render</li>
+        <li>Select the output</li>
+        <li>Hit render and sit back & enjoy</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Screenshots Section -->
+  <section class="screenshots">
+    <h2>App Screenshots</h2>
+    <div class="screenshot-grid">
+      <img src="assets/Screenshot 2025-08-27 at 4.21.42 PM.png" alt="Screenshot 1">
+      <img src="assets/Screenshot 2025-08-27 at 4.24.26 PM.png" alt="Screenshot 2">
+      <img src="assets/Screenshot 2025-08-27 at 4.24.58 PM.png" alt="Screenshot 3">
+      <img src="assets/Screenshot 2025-08-27 at 4.25.13 PM.png" alt="Screenshot 3">
+    </div>
+  </section>
+</body>
+</html>
